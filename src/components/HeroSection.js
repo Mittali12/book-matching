@@ -21,7 +21,7 @@ const HeroSection = () => {
                 genre: genre,
                 title: bookName,
             }
-            const resp = await axios.post("http://localhost:3000/api/match-book", bookData)
+            const resp = await axios.post("/api/match-book", bookData)
             setSearchData(resp?.data?.data?.result)
             setResult(true)
         } catch (error) {
